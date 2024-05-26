@@ -2,10 +2,9 @@
 
 layout(location = 0) in vec4 Position;
 
-uniform mat4 CameraMatrix;
-uniform mat4 ModelMatrix;
+uniform mat4 TransformationMatrix;
 
 void main() {
-	gl_Position = CameraMatrix*ModelMatrix*Position;
+	gl_Position = TransformationMatrix*Position;
 }
 
